@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><shapes>
+    <shape>
+        <triangle>
+            <side>
+1
+            </side>
+            <height>
+2
+            </height>
+        </triangle>
+        <triangle>
+            <side>
+3
+            </side>
+            <height>
+4
+            </height>
+        </triangle>
+    </shape>
+    <shape>
+        <triangle>
+            <side>
+1
+            </side>
+            <height>
+2
+            </height>
+        </triangle>
+        <triangle>
+            <side>
+3
+            </side>
+            <height>
+4
+            </height>
+        </triangle>
+    </shape>
+    <shape>
+        <rectangle>
+            <sideA>
+1
+            </sideA>
+            <sideB>
+2
+            </sideB>
+            <sideC>
+3
+            </sideC>
+            <sideD>
+4
+            </sideD>
+        </rectangle>
+        <rectangle>
+            <sideA>
+1
+            </sideA>
+            <sideB>
+2
+            </sideB>
+            <sideC>
+3
+            </sideC>
+            <sideD>
+4
+            </sideD>
+        </rectangle>
+    </shape>
+    <shape>
+        <circle>
+            <radius>
+4
+            </radius>
+            <point>
+3;0
+            </point>
+        </circle>
+        <circle>
+            <radius>
+4
+            </radius>
+            <point>
+3;0
+            </point>
+        </circle>
+    </shape>
+</shapes>
