@@ -14,7 +14,7 @@ public class SaxParserTest {
 
     private static final String ACTUAL_FILE = "src/test/resources/actual.xml";
     private static final String EXPECTED_FILE = "src/test/resources/expected.xml";
-    private static final String PROCESSED_FILE = "src/test/resources/processed_sax.xml";
+    private static final String PROCESSED_FILE = "processed_sax.xml";
 
     private SaxParser saxParser;
 

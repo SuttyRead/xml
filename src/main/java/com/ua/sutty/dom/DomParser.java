@@ -31,12 +31,11 @@ public class DomParser {
                     .newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.transform(domSource, streamResult);
-            log.trace("Processed xml file(delete even element)");
+            log.trace("Even element have been removed");
         } catch (IOException | ParserConfigurationException | SAXException | TransformerException e) {
-            log.error(e.getMessage(), e);
+            log.error("Error during the execution of the parse method", e);
             throw new RuntimeException(e);
         }
-
     }
 
     private void deleteEvenElement(Node node) {

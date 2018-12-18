@@ -1,5 +1,6 @@
 package com.ua.sutty.sax;
 
+import com.ua.sutty.handler.XmlHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -37,7 +38,7 @@ public class SaxParser extends DefaultHandler {
     }
 
     @Override
-    public void startDocument() throws SAXException {
+    public void startDocument() {
         try {
             xmlStreamWriter.writeStartDocument("UTF-8", "1.0");
             xmlStreamWriter.writeCharacters("\n");
@@ -48,9 +49,9 @@ public class SaxParser extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) {
         if (isEven) {
-            xmlReader.setContentHandler(new SaxParserHandler(xmlReader, this));
+            xmlReader.setContentHandler(new XmlHandler(xmlReader, this));
             isEven = false;
         } else {
             try {
@@ -66,7 +67,7 @@ public class SaxParser extends DefaultHandler {
     }
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length) {
         try {
             xmlStreamWriter.writeCharacters(ch, start, length);
         } catch (XMLStreamException e) {
@@ -76,7 +77,7 @@ public class SaxParser extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
+    public void endElement(String uri, String localName, String qName) {
         try {
             xmlStreamWriter.writeEndElement();
         } catch (XMLStreamException e) {
